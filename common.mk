@@ -100,6 +100,11 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti.recovery
 
 # Camera
+PRODUCT_PACKAGES += \
+    android.frameworks.cameraservice.common-V1-ndk.vendor \
+    android.frameworks.cameraservice.device-V1-ndk.vendor \
+    android.frameworks.cameraservice.service-V1-ndk.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -148,6 +153,10 @@ PRODUCT_PACKAGES += \
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Face unlock
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
 
 # Fastboot
 PRODUCT_PACKAGES += \

@@ -228,6 +228,14 @@ vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
+# Face unlock
+odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service
+odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_face.xml
+odm/lib64/libstfaceunlockocl.so;DUMMY_SHARED_LIB
+odm/init.oplus.face.rc
+vendor/lib64/libcamera2ndk_vendor.so;DISABLE_DEPS
+
 # ESE
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
