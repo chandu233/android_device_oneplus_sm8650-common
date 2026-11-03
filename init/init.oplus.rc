@@ -40,7 +40,6 @@ on post-fs-data
     chown cameraserver cameraserver /mnt/vendor/persist/camera/cm_tcs3449_*
     chmod 0666 /mnt/vendor/persist/camera/spectrum_sn.json
     chmod 0666 /mnt/vendor/persist/camera/cm_tcs3449_*
-    mkdir /data/system/camera_rus 0777 cameraserver  cameraserver
     chown system system /sys/kernel/ois_control/dump_registers
 
 on property:ro.boot.prjname=*
